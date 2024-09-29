@@ -8,14 +8,15 @@
 <body>
   <div id="root"></div>
 
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script>
-    const heading =document.createElement('h1');
+    const heading1 = React.createElement("h1", {}, "Heading 1");
+    const heading2 = React.createElement("h1", {}, "Heading 2");
+    const heading3 = React.createElement("h1", {}, "Heading 3");
 
-    heading.innerHTML = "Hello World by JavaScript";
-
-    const root = document.getElementById('root');
-
-    root.append(heading);
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render([heading1, heading2, heading3]);
   </script>
 </body>
 </html>
